@@ -1,0 +1,6 @@
+Note that for predicting the returns or the next day prices in the nifty, the ERC did not show good results and the directional accuracy was just about 50% ( which is 
+                                                                                                                                                             equivalent to a coin flip)
+
+For predicting the volatility also, the RMSE for ensemble nd the individual reservoir system were the same, tht means the the ensemble is useless 
+in filtering the noise in the markets, which just proves that the market data is itself the based on noise largely, and the predictability of the market 
+system is highly negligible!
