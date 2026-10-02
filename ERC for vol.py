@@ -69,10 +69,6 @@ single_rmse = np.sqrt(np.mean((y_test - ensemble_preds[0]) ** 2))
 erc_rmse = np.sqrt(np.mean((y_test - erc_predictions) ** 2))
 corr = np.corrcoef(y_test, erc_predictions)[0, 1]
 
-print(f"Single Reservoir RMSE : {single_rmse:.4f}%")
-print(f"Ensemble (ERC) RMSE   : {erc_rmse:.4f}%")
-print(f"Forecast Correlation  : {corr:.4f}")
-
 
 plt.figure(figsize=(12, 5))
 n_plot = 150
@@ -86,5 +82,12 @@ plt.xlabel("Date")
 plt.ylabel("Realized Volatility (%)")
 plt.legend()
 plt.grid(True, alpha=0.3)
+plt.annotate(
+    "Single Reservoir RMSE : 0.2335% , Ensemble (ERC) RMSE   : 0.2336%, Forecast Correlation  : 0.8696", 
+    xy=(1.0, -0.15), 
+    xycoords='axes fraction', 
+    ha='right', 
+    fontsize=9, 
+    style='italic')
 plt.tight_layout()
 plt.show()
